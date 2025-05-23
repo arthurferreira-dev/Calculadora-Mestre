@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Calculadora Mestre - Calculadora em JS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <h1>Calculadora Mestre</h1>
+    </header>
+    <main>
+        <article>
+            <h2 id="title-calc">
+                Calculadora em <span style="color: #fafa26;">Javascript 
+                    <i class="fa-brands fa-js" id="js-icon"></i></span>
+            </h2>
+            <section id="calc-sec">
+                <div id="duvida">
+                    <input type="button" value="Operador" onclick="operator()" id="btn-op">
+                </div>
+
+                <h3 id="title"></h3>
+
+                <div id="inputs">
+                    <input type="number" min="0" id="n1"> <input type="number" min="0" id="n2">
+                </div> 
+                <div id="submit">
+                    <input type="submit" value="Calcular..." onclick="calc()">
+                </div>
+
+                <p id="res"></p>
+            </section>
+        </article>
+    </main>
+</body>
+<script src="js/calculator.js"></script>
+</html>

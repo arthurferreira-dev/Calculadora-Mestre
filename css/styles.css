@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --default: Arial, Verdana, Helvetica, sans-serif;
+    --body-back: #bfbfbf;
+    --header-back: #a5a5a5;
+}
+
+body {
+    font-family: var(--default);
+    background-color: var(--body-back);
+}
+
+header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0px 0px 15px 0px;
+    text-align: center;
+    background-color: var(--header-back);
+}
+
+h2#title-calc {
+    margin-top: 10px;
+    background-color: #5d4fc7;
+    text-align: center;
+    margin: auto;
+    width: 86.5%;
+    padding: 4.55px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+h3#title {
+    display: none;
+    text-align: center;
+    margin: auto;
+    background-color: #e2e2e2;
+    width: 375px;
+    padding: 4.5px;
+    border-radius: 50px;
+}
+
+i#js-icon {
+    padding: 5.6px;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+input[type=number] {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 25px;
+    border: none;
+}
+
+input[type=submit] {
+    margin: auto;
+    display: block;
+    padding: 6.5px;
+    border-radius: 25px;
+    border: none;
+    width: 125px;
+}
+
+input[type=button] {
+    margin: auto;
+    display: block;
+    padding: 6.5px;
+    border-radius: 25px;
+    border: none;
+    width: 125px;
+}
+
+section#calc-sec {
+    display: block;
+    background-color: #6d5cef;
+    margin: auto;
+    width: 86.5%;
+    padding: 8px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+#inputs {
+    margin-top: 12px;
+    text-align: center;
+}
+
+#submit {
+    margin-top: 12px;
+    text-align: center;
+}
+
+#duvida {
+    margin-top: 12px;
+    text-align: center;
+}
+
+p#res {
+    display: none;
+    text-align: center;
+    margin-top: 12px;
+    font-weight: 700;
+    font-size: 1.2em;
+}

@@ -68,9 +68,10 @@ input[type=submit] {
     width: 125px;
 }
 
-input[type=button] {
+p#btn-op {
     margin: auto;
     display: block;
+    background-color: #fff;
     padding: 6.5px;
     border-radius: 25px;
     border: none;

@@ -1,42 +1,87 @@
-let op = prompt('Qual é operador a seguir você quer? (+/-/x/÷)')
-
-function operator() {
+function calc() {
+    let op = prompt('Qual é operador a seguir você quer? (+/-/x/÷)')
     let title = document.getElementById('title')
     let btn = document.getElementById('btn-op')
 
+    // Input
+    const input1 = document.getElementById('n1')
+    const input2 = document.getElementById('n2')
+    // String
+    const strNumber1 = +input1.value;
+    const strNumber2 = +input2.value;
+    // Conversão
+    const n1 = strNumber1
+    const n2 = strNumber2
+
+    // Operador Choose
     if (op == '+') {
         btn.style.display = 'none'
         title.style.display = 'block'
         title.innerHTML = "Adição"
+        let resul = n1 + n2
+
+        let fim = document.getElementById('res')
+        fim.style.display = 'block'
+
+        if (n1 == '' || n2 == '' || op == '') { // Tratamento de Error void
+            fim.innerHTML = 'Não foi possível calcular &#x26D4;'
+        } else {
+            fim.innerHTML = `O resultado é ${resul} &#x2728;`
+        }
     } else if (op == '-') {
         btn.style.display = 'none'
         title.style.display = 'block'
         title.innerHTML = "Subtração"
+        let resul = n1 - n2
+
+        let fim = document.getElementById('res')
+        fim.style.display = 'block'
+        
+        if (n1 == '' || n2 == '' || op == '') { // Tratamento de Error void
+            fim.innerHTML = 'Não foi possível calcular &#x26D4;'
+        } else {
+            fim.innerHTML = `O resultado é ${resul} &#x2728;`
+        }
     } else if (op == 'x') {
         btn.style.display = 'none'
         title.style.display = 'block'
         title.innerHTML = "Multiplicação"
+        let resul = n1 * n2
+
+        let fim = document.getElementById('res')
+        fim.style.display = 'block'
+
+        if (n1 == '' || n2 == '' || op == '') { // Tratamento de Error void
+            fim.innerHTML = 'Não foi possível calcular &#x26D4;'
+        } else {
+            fim.innerHTML = `O resultado é ${resul} &#x2728;`
+        }
     } else if (op == '÷') {
         btn.style.display = 'none'
         title.style.display = 'block'
         title.innerHTML = "Divisão"
+        let resul = n1 / n2
+
+        let fim = document.getElementById('res')
+        fim.style.display = 'block'
+
+        if (n1 == '' || n2 == '' || op == '') { // Tratamento de Error void
+            fim.innerHTML = 'Não foi possível calcular &#x26D4;'
+        } else {
+            fim.innerHTML = `O resultado é ${resul} &#x2728;`
+        }
     } else { // Error 404
         btn.style.display = 'none'
         title.style.display = 'block'
         title.innerHTML = "Nenhum operador identificado"
+
+        let fim = document.getElementById('res')
+        fim.style.display = 'block'
+
+        if (n1 == '' || n2 == '' || op == '') { // Tratamento de Error void
+            fim.innerHTML = 'Não foi possível calcular &#x26D4;'
+        } else {
+            fim.innerHTML = `O resultado é ${resul} &#x2728;`
+        }
     }
-}
-
-function calc() {
-    let strNumber1 = document.getElementById('n1')
-    let strNumber2 = document.getElementById('n2')
-    // Conversão
-    let n1 = Number(strNumber1)
-    let n2 = Number(strNumber2)
-
-    let res = n1 + n2
-
-    let fim = document.getElementById('res')
-    fim.style.display = 'block'
-    fim.innerHTML = `${res}`
 }

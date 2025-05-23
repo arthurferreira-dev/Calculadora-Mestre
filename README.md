@@ -11,3 +11,5 @@
 | <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" width="16"> HTML5 | Texto, ícones, botões e entre outros |
 | <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" width="16"> CSS3 | Estilo do Site |
 | <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" width="16"> JavaScript | Interatividade pra deixar legal o site 😉 |
+
+# Código Aberto

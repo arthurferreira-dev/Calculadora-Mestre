@@ -110,3 +110,35 @@ p#res {
     font-weight: 700;
     font-size: 1.2em;
 }
+
+#alert {
+    display: block;
+    background-color: #fa4f4f;
+    margin-top: -15px;
+    padding: 4.5px;
+    margin-bottom: 4px;
+}
+
+#alert > p {
+    display: inline-block;
+    color: #efefef;
+    text-align: center;
+}
+
+i#x-mark {
+    color: #000;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 37px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 460px) { /*Aparelhos Menores ou Celulares*/
+    p#btn-op {
+        margin-bottom: -10px;
+        width: 135px;
+    }
+
+    input[type=number] {
+        margin-top: 10px;
+    }
+} 

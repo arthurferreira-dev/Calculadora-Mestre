@@ -21,26 +21,64 @@ function calc() {
         title.innerHTML = "Adição"
         let resul = n1 + n2
 
-        fim.style.display = 'block'
-
-        if (n1 == '' || n2 == '' || op == '') { // Tratamento de Error void
-            fim.innerHTML = 'Não foi possível calcular &#x26D4;'
-        } else {
-            fim.innerHTML = `O resultado é ${resul} &#x2728;`
+        if (Math.sign(n1) < 0) { // n1 negativo
+            let n1p = Math.abs(n1)
+            let resulp = n1p - n2
+                if (n1 == '' || n2 == '' || op == '') { // Tratamento de Error void
+                    fim.innerHTML = 'Não foi possível calcular &#x26D4;'
+                } else {
+                    fim.innerHTML = `O resultado é ${resulp} &#x2728;`
+                }
+            fim.style.display = 'block'
+        } else if (Math.sign(n2) < 0) { // n2 negativo
+            let n2p = Math.abs(n2)
+            let resulp2 = n1 - n2p
+            if (n1 == '' || n2 == '' || op == '') { // Tratamento de Error void
+                fim.innerHTML = 'Não foi possível calcular &#x26D4;'
+            } else {
+                fim.innerHTML = `O resultado é ${resulp2} &#x2728;`
+            }
+            fim.style.display = 'block'
+        } else { // n1 e n2 positivo
+            let resul = n1 + n2
+            if (n1 == '' || n2 == '' || op == '') { // Tratamento de Error void
+                fim.innerHTML = 'Não foi possível calcular &#x26D4;'
+            } else {
+                fim.innerHTML = `O resultado é ${resul} &#x2728;`
+            }
+            fim.style.display = 'block'
         }
     } else if (op == '-') {
         btn.style.display = 'none'
         title.style.display = 'block'
         title.innerHTML = "Subtração"
-        let resul = n1 - n2
 
-        fim.style.display = 'block'
-        
-        if (n1 == '' || n2 == '' || op == '') { // Tratamento de Error void
-            fim.innerHTML = 'Não foi possível calcular &#x26D4;'
-        } else {
-            fim.innerHTML = `O resultado é ${Math.abs(resul)} &#x2728;`
-            // 'Math.abs() é para deixar o número positivo'
+        if (Math.sign(n1) < 0) { // n1 negativo
+            let n1n = 0 - n1
+            let resuln = n1n - n2
+                if (n1 == '' || n2 == '' || op == '') { // Tratamento de Error void
+                    fim.innerHTML = 'Não foi possível calcular &#x26D4;'
+                } else {
+                    fim.innerHTML = `O resultado é ${resuln} &#x2728;`
+                }
+            fim.style.display = 'block'
+        } else if (Math.sign(n2) < 0) { // n2 negativo
+            let n2n = n2 * -1
+            let resuln2 = n1 + n2n
+            if (n1 == '' || n2 == '' || op == '') { // Tratamento de Error void
+                fim.innerHTML = 'Não foi possível calcular &#x26D4;'
+            } else {
+                fim.innerHTML = `O resultado é ${resuln2} &#x2728;`
+            }
+            fim.style.display = 'block'
+        } else { // subtração normal
+            let resul = n1 - n2
+            if (n1 == '' || n2 == '' || op == '') { // Tratamento de Error void
+                fim.innerHTML = 'Não foi possível calcular &#x26D4;'
+            } else {
+                fim.innerHTML = `O resultado é ${resul} &#x2728;`
+            }
+            fim.style.display = 'block'
         }
     } else if (op == 'x') {
         btn.style.display = 'none'

@@ -54,8 +54,8 @@ function calc() {
         title.innerHTML = "Subtração"
 
         if (Math.sign(n1) < 0) { // n1 negativo
-            let n1n = 0 - n1
-            let resuln = n1n - n2
+            let n1n = n1 * -1
+            let resuln = n1n + n2
                 if (n1 == '' || n2 == '' || op == '') { // Tratamento de Error void
                     fim.innerHTML = 'Não foi possível calcular &#x26D4;'
                 } else {

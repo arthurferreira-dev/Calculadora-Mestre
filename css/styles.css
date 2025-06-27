@@ -112,7 +112,7 @@ p#res {
 }
 
 #alert {
-    display: block;
+    display: none;
     background-color: #fa4f4f;
     margin-top: -15px;
     padding: 4.5px;
@@ -120,7 +120,7 @@ p#res {
 }
 
 #alert > p {
-    display: inline-block;
+    display: none;
     color: #efefef;
     text-align: center;
 }
